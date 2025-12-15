@@ -1,0 +1,310 @@
+/* ===================== */
+/* ===== GLOBAL ======== */
+/* ===================== */
+
+body {
+    margin: 0;
+    font-family: "Saira";
+    overflow-x: hidden; /* penting biar ga ada garis kanan */
+}
+
+/* ===================== */
+/* ===== NAVBAR ======== */
+/* ===================== */
+
+.ininav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.ininav nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px;
+    border-bottom: 1px solid rgb(216, 213, 213);
+    transition: 0.3s;
+}
+
+.ininav.scrolled {
+    background-color: #ffffff;
+    border-color: #152232;
+}
+
+.ininav.scrolled h1,
+.ininav.scrolled a {
+    color: #152232; /* warna tema kamu */
+}
+
+.ininav h1 {
+    color: white;
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+/* logo */
+.ininav img {
+    width: 60px;
+    margin-left: 40px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;margin-right: 5%;
+}
+
+/* link */
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.25s;
+
+}
+
+.menu a:hover {
+    color: #ffb343;
+}
+
+/* underline anim */
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffb343;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.25s;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ===================== */
+/* ===== SECTIONS ====== */
+/* ===================== */
+
+
+/* HOME */
+#home {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 85px;
+    background-image: url(image/background/home1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* penting agar overlay tidak keluar */
+}
+
+/* overlay gelap */
+#home::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* atas kanan bawah kiri = 0 */
+    background: rgba(0,0,0,0.5); /* ubah angka untuk lebih gelap/terang */
+    z-index: 1; /* overlay berada DI DEPAN background */
+    backdrop-filter: blur(0.5px);
+}
+
+#home h1,
+#home h2,
+#home p,
+#home a
+{
+    margin: -8px;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+     text-shadow:
+        0 0 6px rgba(0,0,0,0.8),   /* glow gelap buat kontras */
+        0 0 12px rgba(0,0,0,0.6),  /* layer kedua */
+        0 0 20px rgba(0,0,0,0.5);  /* layer besar */
+}
+
+#home h1 {
+    font-weight: 150;
+    font-size: 55px;
+    margin-left: 7%;
+    margin-top: 7.5%;
+    color: white;
+}
+
+#home h2 {
+    font-size: 40px;
+    margin-left: 7%;   /* biar sejajar dengan h1 */
+    margin-top: px;  /* jarak kecil dari h1 */
+    color: white;
+}
+
+#home p {
+    text-align: left;
+    margin-left: 7%;
+    margin-top: 10px;  /* jarak kecil dari h2 */
+    max-width: 580px;  /* biar rapi */
+    color: white;
+    font-size: 17px;
+}
+
+#home a {
+    position: absolute;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: 1000;
+    font-size: 20px;
+    margin-left: 95px;
+    top: 63%;
+    text-decoration: none;
+    color: white;
+    border: 1px solid  rgb(210, 23, 23);
+    background-color: rgb(210, 23, 23);
+    padding: 1px;
+    border-radius: 7px;
+    border-width: 10px;
+    text-shadow: none;
+    transition: 0.3s ease;
+
+
+}
+
+#home a:hover {
+ transform: translateY(-8px)
+   
+}
+
+
+/* SECTION LAIN */
+#about {
+   
+    min-height: 100vh;
+  background-image: url(image/background/about2.png);
+  background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+
+#about h1,
+#about p,
+#about h2,
+#about .keunggulan {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+#about h1 {
+    text-align: center;
+   left: 695px;
+    color: rgb(42, 42, 43);
+ border: 1px solid #ffb343;
+ border-radius: 10px;
+ padding: 3px;
+    font-size: 20px;
+   background-color: #ffb343;
+   width: 170px;
+   top: 80px;
+}
+
+
+#about p {
+   max-width: 600px;
+   text-align: start;
+   font-size: 16px;
+   top: 100px;
+   left: 700px;
+
+}
+
+#about .imgp {
+position: absolute;
+top: 1193px;
+left: 128px;
+
+}
+
+#about img {
+    position: absolute;
+    left: 120px;
+    width: 450px;
+    top: 840px;
+    border: 2px solid #ffb343;
+    border-radius: 8px;
+    padding: 5px;
+   
+ 
+}
+
+
+#about h2 {
+    left: 550px;
+    top: 220px;
+}
+
+#about .keunggulan {
+    border: 1px solid #15223200;
+    border-radius: 10px;
+    background-color: #99989869;
+    width: 500px ;
+    top: 120px;
+    left: 700px;
+    padding-left: 10px;
+    
+}
+
+#about .keunggulan span {
+    color: #db2323;
+    font-weight: 1000;
+}
+
+#about .keunggulan h3 {
+    font-size: 17px;
+    font-weight: 350;
+}
+
+#service {
+   
+    min-height: 100vh;
+    padding-top: 130px;
+   background-image: url(image/background/servicebg.png);
+     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+#service h1 {
+position: absolute;
+top: 1300px;
+left: 585px;
+}
+
+
+#contact {
+    min-height: 100vh;
+    padding-top: 130px;
+    background-color: #222;
+}

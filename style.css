@@ -35,11 +35,43 @@ body {
 .ininav.scrolled {
     background-color: #ffffff;
     border-color: #152232;
+    
 }
 
-.ininav.scrolled h1,
+.ininav.scrolled h1 span {
+color: #bb0a0a;
+}
+
+.ininav.scrolled h1 {
+    color: #222;
+}
 .ininav.scrolled a {
-    color: #152232; /* warna tema kamu */
+    color: #222;
+}
+
+.ininav.scrolled a:hover {
+    color: #bb0a0a;
+}
+
+.ininav.scrolled a::after {
+   
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #bb0a0a;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.25s;
+}
+
+
+
+.ininav.scrolled img {
+    content: url(image/logo/item.png);
+    width: 60px;
 }
 
 .ininav h1 {
@@ -218,12 +250,12 @@ body {
 #about h1 {
     text-align: center;
    left: 695px;
-    color: rgb(42, 42, 43);
- border: 1px solid #ffb343;
+    color: rgb(255, 255, 255);
+ border: 1px solid #bb0a0a;
  border-radius: 10px;
  padding: 3px;
     font-size: 20px;
-   background-color: #ffb343;
+   background-color: #bb0a0a;
    width: 170px;
    top: 80px;
 }
@@ -240,18 +272,19 @@ body {
 
 #about .imgp {
 position: absolute;
-top: 1193px;
+top: 1200px;
 left: 128px;
 
+ background-color:  #ffffff69;
 }
 
 #about img {
     position: absolute;
     left: 120px;
     width: 450px;
-    top: 840px;
-    border: 2px solid #ffb343;
-    border-radius: 8px;
+    top: 850px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    border-radius: 1px;
     padding: 5px;
    
  
@@ -288,7 +321,7 @@ left: 128px;
    
     min-height: 100vh;
     padding-top: 130px;
-   background-image: url(image/background/servicebg.png);
+
      background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -298,10 +331,61 @@ left: 128px;
 
 #service h1 {
 position: absolute;
-top: 1300px;
-left: 585px;
+top: 1330px;
+left: 579px;
+font-size:40px ;
 }
 
+
+#service .layan img {
+position: relative;
+width: 200px; 
+height: 170px;
+ background-color: #ffffff93;
+padding: 30px;
+padding-bottom: 300px;
+border-radius: 8px;
+z-index: 3;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+#service .layan {
+  position: absolute;
+display: flex;
+left: 80px;
+  flex-direction: row;
+ column-gap: 60px;
+top: 1460px;
+ border-bottom: 500px;
+
+}
+
+#service .bgs {
+    position: absolute;
+    width: 100%;
+    top: 1630px;
+    opacity: 35%;
+   z-index: 1;
+}
+
+#service a {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 1995px;
+    z-index: 3;
+    left: 635px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #bb0a0a;
+    border: #bb0a0a;
+    border-radius: 10px;
+    padding: 7px;
+    color: white;
+
+}
 
 #contact {
     min-height: 100vh;

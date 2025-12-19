@@ -18,7 +18,7 @@ body {
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(0px);
   transition: background 0.3s ease;
   z-index: 1000;
 }
@@ -28,20 +28,46 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  border-bottom: 1px solid rgb(216, 213, 213);
+
   transition: 0.3s;
 }
 
 .ininav.scrolled {
-    background-color: #ffffff;
-    border-color: #152232;
+  background-color: #ffffff;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ininav.scrolled h1 span {
+  color: #bb0a0a;
 }
 
 .ininav.scrolled h1 {
-    color: #222;
+  color: #222;
 }
 .ininav.scrolled a {
-    color: #152232; /* warna tema kamu */
+  color: #222;
+}
+
+.ininav.scrolled a:hover {
+  color: #bb0a0a;
+}
+
+.ininav.scrolled a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #bb0a0a;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: 0.25s;
+}
+
+.ininav.scrolled img {
+  content: url(image/logo/item.png);
+  width: 60px;
 }
 
 .ininav h1 {
@@ -208,16 +234,16 @@ body {
 }
 
 #about h1 {
-    text-align: center;
-   left: 695px;
-    color: rgb(42, 42, 43);
- border: 1px solid #ffb343;
- border-radius: 10px;
- padding: 3px;
-    font-size: 20px;
-   background-color: #ffb343;
-   width: 170px;
-   top: 80px;
+  text-align: center;
+  left: 695px;
+  color: rgb(255, 255, 255);
+  border: 1px solid #bb0a0a;
+  border-radius: 10px;
+  padding: 3px;
+  font-size: 20px;
+  background-color: #bb0a0a;
+  width: 170px;
+  top: 80px;
 }
 
 #about p {
@@ -229,22 +255,19 @@ body {
 }
 
 #about .imgp {
-position: absolute;
-top: 1193px;
-left: 128px;
-
+  position: absolute;
+  top: 1208px;
+  left: 128px;
 }
 
 #about img {
-    position: absolute;
-    left: 120px;
-    width: 450px;
-    top: 840px;
-    border: 2px solid #ffb343;
-    border-radius: 8px;
-    padding: 5px;
-   
- 
+  position: absolute;
+  left: 120px;
+  width: 450px;
+  top: 850px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 5px;
 }
 
 #about h2 {
@@ -273,25 +296,239 @@ left: 128px;
 }
 
 #service {
-   
-    min-height: 100vh;
-    padding-top: 130px;
-   background-image: url(image/background/servicebg.png);
-     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+  min-height: 140vh;
+  padding-top: 130px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #service h1 {
-position: absolute;
-top: 1300px;
-left: 585px;
+  position: absolute;
+  top: 1330px;
+  left: 620px;
+  font-size: 40px;
 }
 
+#service .layan img {
+  position: relative;
+  width: 200px;
+  height: 170px;
+  background-color: #ffffff93;
+  padding: 30px;
+  padding-bottom: 100px;
+  border-radius: 8px;
+  z-index: 3;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+#service .layan {
+  position: absolute;
+  display: flex;
+  left: 80px;
+  flex-direction: row;
+  column-gap: 60px;
+  top: 1460px;
+  border-bottom: 500px;
+}
+
+#service .bgs {
+  position: absolute;
+  width: 100%;
+  top: 1630px;
+  opacity: 35%;
+  z-index: 1;
+}
+
+#service .box a {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 1800px;
+  z-index: 3;
+  left: 630px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #bb0a0a;
+  border: #bb0a0a;
+  border-radius: 10px;
+  padding: 7px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#service .box a:hover {
+  transform: translateY(-8px);
+}
+/*================================ service 2 ===================================*/
+#service .jdl2 {
+  top: 1880px;
+  z-index: 4;
+}
+
+#service .layan2 img {
+  position: relative;
+  width: 200px;
+  height: 170px;
+  background-color: #ffffff93;
+  padding: 30px;
+  padding-bottom: 100px;
+  border-radius: 8px;
+  z-index: 3;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+#service .layan2 {
+  position: absolute;
+  display: flex;
+  left: 80px;
+  flex-direction: row;
+  column-gap: 60px;
+  top: 2010px;
+  border-bottom: 500px;
+}
+
+#service .boki2 a {
+  display: inline-block;
+  position: relative;
+  left: 630px;
+  top: 800px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #bb0a0a;
+  border: #bb0a0a;
+  border-radius: 10px;
+  padding: 7px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#service .boki2 a:hover {
+  transform: translateY(-8px);
+}
 
 #contact {
-  min-height: 100vh;
-  padding-top: 130px;
-  background-color: #222;
+  position: relative;
+  min-height: 25vh;
+  padding-top: 90px;
+  background-image: url(image/background/sdfs.png);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#contact .kiri {
+  position: relative;
+  color: rgb(248, 246, 246);
+  bottom: 70px;
+  left: 40px;
+  font-size: 13px;
+}
+
+#contact .kiri p {
+  width: 360px;
+}
+
+#contact .sos {
+  position: absolute;
+}
+
+#contact .sos h1 {
+  position: relative;
+  left: 595px;
+  bottom: 260px;
+  color: rgb(248, 246, 246);
+  font-size: 27px;
+}
+
+#contact .sos p {
+  position: relative;
+  left: 545px;
+  bottom: 275px;
+  color: rgb(248, 246, 246);
+  font-size: 13px;
+}
+
+#contact .sos a {
+  position: relative;
+  left: 615px;
+  bottom: 265px;
+  color: rgb(248, 246, 246);
+  width: 50px;
+}
+
+#contact .sos a:hover {
+  color: #bb0a0a;
+}
+
+#contact .tengah {
+  position: absolute;
+  color: #222;
+  left: 1010px;
+  font-size: 13px;
+  border: 0px solid rgb(191, 187, 187);
+  background-color: rgba(224, 220, 220, 0.942);
+  width: 300px;
+  height: 190px;
+  top: 33px;
+  padding-left: 23px;
+  border-radius: 5px;
+}
+
+#contact .tengah h1 {
+  position: absolute;
+  bottom: 122px;
+}
+
+#contact .email {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact .email a {
+  position: relative;
+  text-decoration: none;
+  color: #222;
+  top: 65px;
+  left: 25px;
+}
+
+#contact .email a:hover {
+  color: #bb0a0a;
+}
+
+#contact .garis {
+  position: relative;
+  content: "";
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.194);
+  width: 100%;
+  right: 0px;
+  bottom: 20px;
+}
+#contact .icon {
+  position: absolute;
+  bottom: 17px;
+}
+
+#contact .icon .satu {
+  width: 15px;
+}
+
+#contact .icon .dua {
+  width: 15px;
+}
+
+#contact .icon .tiga {
+  width: 15px;
+}
+
+#contact .kopi {
+  position: relative;
+  color: rgb(248, 246, 246);
+  bottom: 10px;
+  font-size: 12px;
+  text-align: center;
 }

@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  border-bottom: 1px solid rgb(216, 213, 213);
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
 
@@ -81,6 +81,155 @@ body {
 
 .menu a:hover::after {
   transform: scaleX(1);
+}
+
+.menu a.active {
+  color: #bb0a0a;
+  font-weight: 600;
+}
+
+/*========== ISI PRODUCT ===========*/
+#isiproduct {
+  margin-top: 90px;
+  min-height: 260vh;
+  background-image: url(image/background/about2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#isiproduct .head {
+  position: relative;
+  text-align: center;
+  top: 20px;
+}
+
+#isiproduct .head h1 {
+  font-size: 50px;
+}
+
+#isiproduct .head p {
+  position: relative;
+  font-size: 20px;
+  bottom: 25px;
+  left: 15px;
+}
+
+#isiproduct .over {
+  position: relative;
+  top: 50px;
+  left: 510px;
+  padding: 3px;
+  color: #fff;
+  border: 1px solid #bb0a0a;
+  background-color: #bb0a0a;
+  border-radius: 5px;
+  padding-left: 17px;
+  width: 350px;
+}
+
+#isiproduct .konsum {
+  position: absolute;
+  top: 800px;
+  left: 560px;
+  padding: 3px;
+  color: #fff;
+  border: 1px solid #bb0a0a;
+  background-color: #bb0a0a;
+  border-radius: 5px;
+  padding-left: 30px;
+  width: 230px;
+}
+
+#isiproduct .chill {
+  position: absolute;
+  top: 1275px;
+  left: 600px;
+  padding: 3px;
+  color: #fff;
+  border: 1px solid #bb0a0a;
+  background-color: #bb0a0a;
+  border-radius: 5px;
+  padding-left: 25px;
+  width: 160px;
+}
+
+#isiproduct .slider3 {
+  width: 900px;
+  overflow: hidden;
+  position: relative;
+  left: 215px;
+  border: 0px solid #222;
+  border-radius: 5px;
+  top: 300px;
+  padding: 30px;
+}
+
+#isiproduct .slider {
+  width: 900px;
+  overflow: hidden;
+  position: relative;
+  left: 215px;
+  border: 0px solid #222;
+  border-radius: 5px;
+  top: 35px;
+  padding: 30px;
+}
+
+#isiproduct .prdk {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#isiproduct .prdk img {
+  width: 190px;
+  height: 150px;
+  flex-shrink: 0;
+  margin-right: 50px;
+  border-radius: 5px;
+  background: #d8d8d8;
+  padding: 10px 10px 120px;
+  border: 2px solid rgba(154, 152, 152, 0.634);
+}
+
+#isiproduct .slider2 {
+  width: 900px;
+  overflow: hidden;
+  position: relative;
+  left: 215px;
+  border: 0px solid #222;
+  border-radius: 5px;
+  top: 175px;
+  padding: 30px;
+}
+
+/* tombol */
+#isiproduct .prev,
+#isiproduct .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#isiproduct .prev {
+  left: 10px;
+}
+#isiproduct .next {
+  right: 10px;
+}
+
+/* disabled state */
+#isiproduct button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* =============== FOOTER =============== */

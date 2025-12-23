@@ -88,6 +88,21 @@ body {
   font-weight: 600;
 }
 
+#service {
+  margin-top: 75px;
+  min-height: 290vh;
+  background-image: url(image/background/about2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#service .gbr {
+  position: relative;
+  z-index: -4;
+}
+
 /* =============== FOOTER =============== */
 #contact {
   position: relative;

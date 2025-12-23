@@ -97,13 +97,25 @@ body {
 
 #tentang {
   position: relative;
-  margin-top: 90px;
+  margin-top: 75px;
   min-height: 100vh;
   background-image: url(image/background/about2.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+#tentang h1 {
+  position: relative;
+  text-align: center;
+  bottom: 255px;
+  font-size: 50px;
+  color: #fff;
+}
+
+#tentang .gbr {
+  position: relative;
 }
 
 .informasi {
